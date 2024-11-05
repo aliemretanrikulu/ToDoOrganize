@@ -1,7 +1,7 @@
 ﻿using ToDoOrganize.Models.Dtos.Tokens;
 using ToDoOrganize.Models.Entities;
 
-namespace TodoListify.Service.Abstracts;
+namespace ToDoOrganize.Service.Abstracts;
 
 public interface IJwtService
 {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using ToDoOrganize.Models.Entities;
 
-namespace TodoListify.Service.Rules;
+namespace ToDoOrganize.Service.Rules;
 
 public class UserBusinessRules(UserManager<User> userManager)
 {

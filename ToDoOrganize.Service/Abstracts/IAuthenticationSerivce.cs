@@ -2,7 +2,7 @@
 using ToDoOrganize.Models.Dtos.Tokens;
 using ToDoOrganize.Models.Dtos.Users.Requests;
 
-namespace TodoListify.Service.Abstracts;
+namespace ToDoOrganize.Service.Abstracts;
 
 public interface IAuthenticationService
 {

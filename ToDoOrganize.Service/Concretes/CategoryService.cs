@@ -88,7 +88,7 @@ public class CategoryService : ICategoryService
     {
         Category category = categoryRepository.GetById(updateCategory.Id);
 
-        if (category == null)
+        if (category is null)
         {
             return new ReturnModel<CategoryResponseDto>
             {

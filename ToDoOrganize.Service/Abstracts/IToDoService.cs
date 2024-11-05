@@ -3,7 +3,7 @@ using Core.Responses;
 using ToDoOrganize.Models.Dtos.ToDos.Requests;
 using ToDoOrganize.Models.Dtos.ToDos.Responses;
 
-namespace TodoListify.Service.Abstracts;
+namespace ToDoOrganize.Service.Abstracts;
 
 public interface IToDoService
 {
