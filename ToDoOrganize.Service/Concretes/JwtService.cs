@@ -63,4 +63,5 @@ public class JwtService : IJwtService
         claims.AddRange(audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
         return claims;
     }
+
 }

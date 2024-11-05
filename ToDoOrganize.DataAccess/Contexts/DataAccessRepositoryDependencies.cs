@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ToDoOrganize.DataAccess.Abstracts;
 using ToDoOrganize.DataAccess.Concretes;
@@ -12,6 +13,7 @@ public static class DataAccessRepositoryDependencies
         services.AddScoped<IToDoRepository, EfToDoRepository>();
         services.AddScoped<ICategoryRepository, EfCategoryRepository>();
         services.AddDbContext<BaseDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("SqlConnection")));
+        
         return services;
     }
 }
