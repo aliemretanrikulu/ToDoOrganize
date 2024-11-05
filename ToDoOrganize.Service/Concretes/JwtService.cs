@@ -11,7 +11,6 @@ namespace ToDoOrganize.Service.Concretes;
 
 public class JwtService : IJwtService
 {
-    {
     private readonly TokenOption tokenOption;
     private readonly UserManager<User> userManager;
 
@@ -49,7 +48,7 @@ public class JwtService : IJwtService
     {
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim("Email", user.Email),
             new Claim(ClaimTypes.Name,user.UserName)
         };
@@ -64,5 +63,4 @@ public class JwtService : IJwtService
         claims.AddRange(audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
         return claims;
     }
-
 }
