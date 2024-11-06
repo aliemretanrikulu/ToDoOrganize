@@ -9,6 +9,7 @@ using ToDoOrganize.DataAccess.Abstracts;
 using ToDoOrganize.DataAccess.Concretes;
 using ToDoOrganize.DataAccess.Contexts;
 using ToDoOrganize.Models.Entities;
+using ToDoOrganize.Service;
 using ToDoOrganize.Service.Abstracts;
 using ToDoOrganize.Service.Concretes;
 using ToDoOrganize.Service.Profiles;
@@ -37,7 +38,7 @@ builder.Services.AddScoped<IToDoRepository, EfToDoRepository>();
 builder.Services.AddScoped<IToDoService, TodoService>();
 
 builder.Services.AddDataAccessDependencies(builder.Configuration);
-//builder.Services.AddServiceDependencies();
+builder.Services.AddServiceDependencies();
 
 
 builder.Services.AddScoped<IJwtService, JwtService>();
@@ -45,7 +46,7 @@ builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<DecoderService>();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.Configure<TokenOptions>(builder.Configuration.GetSection("TokenOption"));
+builder.Services.Configure<TokenOption>(builder.Configuration.GetSection("TokenOption"));
 
 builder.Services.AddScoped<IUserService, UserService>();
 
